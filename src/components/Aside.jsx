@@ -1,15 +1,31 @@
 import { GiCalendar, GiClawSlashes, GiMailbox, GiMayanPyramid, GiPhone } from "react-icons/gi";
 import { FaEnvelope, FaGithub, FaLinkedin, FaLocationArrow } from "react-icons/fa";
+import { IoCloseSharp } from "react-icons/io5";
 import { FaCode, FaLocationDot } from "react-icons/fa6";
+import { useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 
 const Aside = () => {
+  const [isvisible, setIsVisible] = useState(false);
+
+  const showSidebar = () => {
+    setIsVisible(!isvisible);
+     const hamburger_menu = document.querySelector('.hamburger_menu')
+      hamburger_menu.style.display = 'flex'
+  };
+
+  const hideSidebar = () => {
+    setIsVisible(!isvisible);
+    const hamburger_menu = document.querySelector('.hamburger_menu')
+      hamburger_menu.style.display = 'none'
+  };
+
   return (
     <aside className="sidebar">
         <div className="sidebar-info">
           <figure className="avatar-box">
             <img
-              src="/images/Codingdp.png"
+              src="/images/LinkedinDp1.png"
               alt="Koushik Kadari"
               width="80"
             />
@@ -23,11 +39,22 @@ const Aside = () => {
             <p className="title">Web developer</p>
           </div>
 
-          <button className="info_more-btn" data-sidebar-btn>
-            <span>Show Contacts</span>
+          { !isvisible && 
+            <button className="info_more-btn" data-sidebar-btn onClick={showSidebar}>
+              <span>Show Contacts</span>
 
-            <GiClawSlashes />
-          </button>
+              <GiClawSlashes />
+            </button>
+          }
+
+          <ul className={ "hamburger_menu" }>
+            <li onClick={hideSidebar} className="hamburger_close"> <IoCloseSharp size={35}/></li>
+            <li><a href="mailto:kaushikkadari456@gmail.com" target="_blank" rel="noreferrer"><span><FaEnvelope/></span> Email</a></li>
+            <li><a href="tel:+917671898733" target="_blank" rel="noreferrer"><span><GiPhone/></span> Phone</a></li>
+            <li><a href="https://www.linkedin.com/in/kaushik-kadari/" target="_blank" rel="noreferrer"><span><FaLinkedin/></span> Linkedin</a></li>
+            <li><a href="https://github.com/kaushik-kadari" target="_blank" rel="noreferrer"><span><FaGithub/></span> Github</a></li>
+            <li><a href="https://leetcode.com/kaushik_kadari" target="_blank" rel="noreferrer"><span><FaCode/></span> Leetcode</a></li>
+          </ul>
         </div>
 
         <div className="sidebar-info_more">
