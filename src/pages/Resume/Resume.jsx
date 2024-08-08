@@ -6,7 +6,7 @@ import SkillItem from './SkillItem';
 const Resume = () => {
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = "src\\pages\\Resume\\Koushik_Resume.pdf";
+    link.href = "Koushik_Resume.pdf";
     link.download = 'Koushik_Kadari_Resume.pdf';
     link.click();
   };
@@ -55,30 +55,18 @@ const Resume = () => {
           <TimelineItem
             title="Cuda Programmer"
             date="2024 — Present"
-            description="Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas molestias exceptur."
+            description="As a CUDA Programmer, I developed and optimized parallel algorithms to accelerate computational tasks using NVIDIA GPUs, enhancing performance for complex simulations. My work included implementing and testing CUDA kernels to achieve significant speedups in processing times."
           />
-          {/* <TimelineItem
-            title="Art director"
-            date="2013 — 2015"
-            description="Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-          />
-          <TimelineItem
-            title="Web designer"
-            date="2010 — 2013"
-            description="Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-          /> */}
         </ol>
       </div>
 
       <div className="skill">
         <h3 className="h3 skills-title">Technical Skills</h3>
-        <ul className="skills-list content-card">
-          <SkillItem title="Python" value={100} />
-          <SkillItem title="C++" value={100} />
-          <SkillItem title="JavaScript" value={90} />
-          <SkillItem title="Java" value={80} />
-          <SkillItem title="React" value={80} />
-        </ul>
+        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Languages </h4> <p style={{marginRight : '15px'}}>:</p> C, C++, Python, Java, Javascript</span>
+        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Frontend </h4> <p style={{marginRight : '15px'}}>:</p> React.js, Tailwind, Bootstrap, HTML, CSS</span>
+        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Backend </h4> <p style={{marginRight : '15px'}}>:</p> Node.js, Express.js, Flask</span>
+        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Databases </h4> <p style={{marginRight : '15px'}}>:</p> MongoDB, MySQL</span>
+        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Tools & Platforms </h4> <p style={{marginRight : '15px'}}>:</p> Git, GitHub, Unix/Linux, Postman, VS Code, Windows</span>
       </div>
     </section>
   );

@@ -1,6 +1,30 @@
-
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_tkp84rq', 'template_gzdkiar', form.current, {
+        publicKey: 'AFDm5amSpzDdAu2EK',
+      })
+      .then(
+        () => {
+          console.log('Email sent!');
+          toast.success('Your message has been sent!');
+          e.target.reset();
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          toast.error(error.text);
+        },
+      );
+  };
+
   return (
     <section className="contact" data-page="contact">
 
@@ -22,12 +46,12 @@ const Contact = () => {
 
         <h3 className="h3 form-title">Contact Form</h3>
 
-        <form action="#" className="form" data-form>
+        <form action="#" className="form" data-form onSubmit={sendEmail} ref={form}>
 
           <div className="input-wrapper">
-            <input type="text" name="fullname" className="form-input" placeholder="Full name" required data-form-input />
+            <input type="text" name="from_name" className="form-input" placeholder="Full name" required data-form-input autoComplete='off'/>
 
-            <input type="email" name="email" className="form-input" placeholder="Email address" required data-form-input />
+            <input type="email" name="from_email" className="form-input" placeholder="Email address" required data-form-input autoComplete='off'/>
           </div>
 
           <textarea name="message" className="form-input" placeholder="Your Message" required data-form-input></textarea>
