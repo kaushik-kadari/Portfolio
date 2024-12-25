@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaBookReader, FaDownload, FaRegBookmark } from "react-icons/fa";
+import { ImMakeGroup } from "react-icons/im";
 import TimelineItem from './TimelineItem';
 import SkillItem from './SkillItem';
 
@@ -55,18 +56,29 @@ const Resume = () => {
           <TimelineItem
             title="Cuda Programmer"
             date="2024 — Present"
-            description="As a CUDA Programmer, I developed and optimized parallel algorithms to accelerate computational tasks using NVIDIA GPUs, enhancing performance for complex simulations. My work included implementing and testing CUDA kernels to achieve significant speedups in processing times."
+            description={[
+              "• Optimized sequential code to parallel code using CUDA, achieving a 25% speedup in performance and efficiency.",
+              "• Implemented and tested CUDA kernels, achieving significant speedup in computational tasks.",
+              "• Conducted performance analysis and debugging of CUDA applications to ensure optimal functionality.",
+            ].map((line, index) => <p key={index}>{line}</p>)}
           />
         </ol>
       </div>
 
       <div className="skill">
-        <h3 className="h3 skills-title">Technical Skills</h3>
-        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Languages </h4> <p style={{marginRight : '15px'}}>:</p> C, C++, Python, Java, Javascript</span>
-        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Frontend </h4> <p style={{marginRight : '15px'}}>:</p> React.js, Tailwind, Bootstrap, HTML, CSS</span>
-        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Backend </h4> <p style={{marginRight : '15px'}}>:</p> Node.js, Express.js, Flask</span>
-        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Databases </h4> <p style={{marginRight : '15px'}}>:</p> MongoDB, MySQL</span>
-        <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Tools & Platforms </h4> <p style={{marginRight : '15px'}}>:</p> Git, GitHub, Unix/Linux, Postman, VS Code, Windows</span>
+        <div className='title-wrapper'>
+          <div className='icon-box'>
+            <ImMakeGroup/>
+          </div>
+          <h3 className="h3 ">Technical Skills</h3>
+        </div>
+        <div className='timeline-text' style={{display: 'flex', flexDirection: 'column', gap: '10px', marginLeft: '60px'}}>
+          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Languages </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> C, C++, Python, Java, Javascript</span>
+          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Frontend </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> React.js, Tailwind, Bootstrap, HTML, CSS</span>
+          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Backend </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> Node.js, Express.js, Flask</span>
+          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Databases </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> MongoDB, MySQL</span>
+          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Tools & Platforms </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> Git, GitHub, Unix/Linux, Postman, VS Code, Windows</span>
+        </div>
       </div>
     </section>
   );

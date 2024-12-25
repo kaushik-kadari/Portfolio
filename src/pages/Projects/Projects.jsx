@@ -14,6 +14,7 @@ const Projects = () => {
     fetch('/projects.json')
       .then(response => response.json())
       .then(data => {
+        // console.log(data);
         setProjects(data);
         setFilteredProjects(data);
       })
@@ -62,7 +63,7 @@ const Projects = () => {
               data-category={project.category}
               key={project.id}
             >
-              <a href="#">
+              <a href={project.link}>
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     <FaRegEye />
