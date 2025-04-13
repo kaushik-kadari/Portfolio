@@ -27,7 +27,7 @@ const Projects = () => {
     if (category === 'All') {
       setFilteredProjects(projects);
     } else {
-      const filtered = projects.filter(project => project.category === category);
+      const filtered = projects.filter(project => project.category.includes(category));
       setFilteredProjects(filtered);
     }
   };
@@ -71,7 +71,7 @@ const Projects = () => {
                   <img src={project.image} alt={project.title} loading="lazy" />
                 </figure>
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-category">{project.category}</p>
+                <p className="project-category">{project.category.join(', ')}</p>
               </a>
             </li>
           ))}

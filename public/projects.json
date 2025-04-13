@@ -1,38 +1,44 @@
 [
     {
       "id": 1,
-      "title": "Bankist Services",
-      "category": "Web development",
-      "image": "/images/project1.png",
-      "link": "https://bankist-services.netlify.app/"
+      "title": "SkillForge",
+      "category": ["Web development", "Artificial Intelligence"],
+      "image": "/images/project6.jpg",
+      "link": "https://github.com/kaushik-kadari/SkillForge"
     },
     {
       "id": 2,
-      "title": "AI/ML-powered chatbot",
-      "category": "Machine learning",
-      "image": "/images/project2.png",
-      "link": "https://nmcg-chatbot.onrender.com/"
+      "title": "Registration Info LLM",
+      "category": ["Artificial Intelligence"],
+      "image": "/images/project3.png",
+      "link": "https://github.com/kaushik-kadari/Registration_Info_LLM_Backend"
     },
     {
       "id": 3,
-      "title": "Registration Info LLM",
-      "category": "Artificial Intelligence",
-      "image": "/images/project3.png",
-      "link": "https://github.com/kaushik-kadari/Registration_Info_LLM"
-    },
-    {
-      "id": 4,
       "title": "Metro Weather",
-      "category": "Web development",
+      "category": ["Web development"],
       "image": "/images/project4.png",
       "link": "https://github.com/kaushik-kadari/MetroWeather"
     },
     {
+      "id": 4,
+      "title": "AI/ML-powered chatbot",
+      "category": ["Machine learning"],
+      "image": "/images/project2.png",
+      "link": "https://github.com/kaushik-kadari/NMCG"
+    },
+    {
       "id": 5,
+      "title": "Bankist Services",
+      "category": ["Web development"],
+      "image": "/images/project1.png",
+      "link": "https://github.com/kaushik-kadari/Bankist_Services"
+    },
+    {
+      "id": 6,
       "title": "Role Based Access Control - Admin Dashboard",
-      "category": "Web development",
+      "category": ["Web development"],
       "image": "/images/project5.png",
       "link": "https://github.com/kaushik-kadari/Role-Based-Access-Control-Admin-Dashboard"
     }
   ]
-  

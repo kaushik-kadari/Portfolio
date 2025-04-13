@@ -17,8 +17,8 @@ const servicesData = [
   },
   {
     icon: "/images/icon-app.svg",
-    title: "CUDA programming",
-    description: "I am good at CUDA programming."
+    title: "Artificial Intelligence",
+    description: "I currently have a good understanding of AI."
   },
   {
     icon: "/images/icon-photo.svg",

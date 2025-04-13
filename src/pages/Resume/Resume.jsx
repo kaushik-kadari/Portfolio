@@ -54,8 +54,8 @@ const Resume = () => {
         </div>
         <ol className="timeline-list">
           <TimelineItem
-            title="Cuda Programmer"
-            date="2024 — Present"
+            title="Research Intern – Parallel Computing and CUDA"
+            date="Jun 2024 – Feb 2025"
             description={[
               "• Optimized sequential code to parallel code using CUDA, achieving a 25% speedup in performance and efficiency.",
               "• Implemented and tested CUDA kernels, achieving significant speedup in computational tasks.",
