@@ -30,7 +30,7 @@ const Resume = () => {
           <TimelineItem
             title="Keshav Memorial Institute of Technology, Hyderabad"
             date="2022 — Present"
-            description="B.Tech in Information Technology 9.58 CGPA"
+            description="B.Tech in Information Technology 9.29 CGPA"
           />
           <TimelineItem
             title="Sri Chaitanya Junior College, Hyderabad"
