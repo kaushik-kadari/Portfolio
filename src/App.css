@@ -238,17 +238,6 @@ article.active {
   padding-bottom: 7px;
 }
 
-.article-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background: var(--text-gradient-yellow);
-  border-radius: 3px;
-}
-
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
   height: 5px; /* for horizontal scrollbar */
@@ -559,7 +548,6 @@ main {
   align-items: center;
   /* justify-content: ; */
   gap: 15px;
-  margin-bottom: 30px;
 }
 
 .Resume-btn {

@@ -1,78 +1,87 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import Testimonial from "./Testimonial";
 import Service from "./Service";
 
 const servicesData = [
   {
-    icon: "/images/icon-dev.svg",
+    icon: "/images/dev-icon.png",
     title: "Web development",
-    description: "High-quality development of sites at the professional level."
+    description: "High-quality development of sites at the professional level.",
   },
   {
-    icon: "/images/icon-design.svg",
-    title: "Machine learning",
-    description: "I am good at ML and Retrieval-Augmented Generation."
+    icon: "/images/genai-icon.png",
+    title: "Gen AI",
+    description: "I am good at Gen AI and Retrieval-Augmented Generation.",
   },
   {
-    icon: "/images/icon-app.svg",
-    title: "Artificial Intelligence",
-    description: "I currently have a good understanding of AI."
+    icon: "/images/appdev-icon.png",
+    title: "iOS App Development",
+    description:
+      "I currently have a good understanding of iOS App Development.",
   },
   {
-    icon: "/images/icon-photo.svg",
+    icon: "/images/dsa-icon.png",
     title: "DSA and OOP",
-    description: "Iam currently learning DSA and OOP."
-  }
+    description: "I have a good understanding of DSA and OOP.",
+  },
 ];
 
-
 const About = () => {
-  const [testimonials , setTestimonials ] = useState([]);
-  useEffect(()=> {
-    fetch('testimonials.json').then(res => res.json()).then(data => {
-      console.log(data)
-      setTestimonials(data)
-    });
-  }, [])
+  const [testimonials, setTestimonials] = useState([]);
+  useEffect(() => {
+    fetch("testimonials.json")
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setTestimonials(data);
+      });
+  }, []);
   return (
     <article className="about  active" data-page="about">
+      <header>
+        <h2 className="h2 article-title">About me</h2>
+      </header>
 
-    <header>
-      <h2 className="h2 article-title">About me</h2>
-    </header>
+      <section className="about-text">
+        <p>
+          I am a motivated software engineer specializing in full-stack
+          development, AI/ML, and iOS application development. I have hands-on
+          experience building scalable applications using the MERN stack and
+          developing intelligent systems powered by LLMs and Retrieval-Augmented
+          Generation (RAG). My professional background includes iOS development at Eventbrite, 
+          where I led the migration of the Organizer App to a modern architecture using Swift Concurrency.
+          Additionally, I have experience in CUDA-based GPU optimization, where I contributed to 
+          accelerating large-scale scientific simulations.
+        </p>
+        <p>
+          I have built impactful projects such as SkillForge—an AI-integrated
+          learning platform with features like Chat-with-PDF, AI-generated
+          content, quizzes, and an interview bot—and a customized RAG-powered
+          LLM component for the Registration Department’s citizen service
+          portal. My technical skill set spans C, C++, Python, Java, JavaScript,
+          Swift, React.js, Node.js, Express.js, Flask, MongoDB, MySQL, Tailwind,
+          Docker, Git, and more.
+        </p>
+        <p>
+          I am currently open to freelance and collaborative opportunities. If
+          you have a project—whether AI-driven, full-stack, or
+          performance-critical—that could benefit from my expertise, feel free
+          to reach out. I’m always excited to work on innovative and meaningful
+          solutions.
+        </p>
+      </section>
 
-    <section className="about-text">
-      <p>
-      As a motivated software engineering fresher, I specialize in developing projects using  MERN stack (MongoDB, Express.js, React.js, Node.js), machine learning and Retrieval-Augmented Generation (RAG). With hands-on experience in CUDA programming and full-stack web development, I am eager to contribute to innovative projects and collaborate with dynamic teams.
-      </p>
-      {/* <p>
-        My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-        Moreover, I
-        add personal touch to your product and make sure that is eye-catching and easy to use. 
-      </p> */}
-      <p>
-      I have developed a range of projects, including a customized LLM component for a registration service platform, an AI/ML-powered chatbot for the Namami Gange project, and a web application providing basic bank services. My technical skills encompass Python, Java, C, C++, JavaScript, HTML/CSS, React, Bootstrap, Flask, Node.js, Express.js, MongoDB, and MySQL.
-      </p>
-      <p>
-        I am available for freelance projects. If you have a project that you
-        think I would be a good fit for, please get in touch.
-      </p>
-    </section>
-
-
-    {/* <!--
+      {/* <!--
       - service
     --> */}
 
-    <section className="service">
+      <section className="service">
+        <h3 className="h3 service-title">What i'm doing</h3>
 
-      <h3 className="h3 service-title">What i'm doing</h3>
-
-      <ul className="service-list">
-
-      {servicesData.map((service, index) => (
+        <ul className="service-list">
+          {servicesData.map((service, index) => (
             <Service
               key={index}
               icon={service.icon}
@@ -80,17 +89,14 @@ const About = () => {
               description={service.description}
             />
           ))}
+        </ul>
+      </section>
 
-      </ul>
-
-    </section>
-
-
-    {/* <!--
+      {/* <!--
       - testimonials
     --> */}
 
-    {/* <section className="testimonials">
+      {/* <section className="testimonials">
 
       <h3 className="h3 testimonials-title">Testimonials</h3>
 
@@ -109,12 +115,11 @@ const About = () => {
 
     </section> */}
 
-
-    {/* <!--
+      {/* <!--
       - clients
     --> */}
 
-    {/* <section className="clients">
+      {/* <section className="clients">
 
       <h3 className="h3 clients-title">Clients</h3>
 
@@ -159,9 +164,8 @@ const About = () => {
       </ul>
 
     </section> */}
+    </article>
+  );
+};
 
-  </article>
-  )
-}
-
-export default About
+export default About;

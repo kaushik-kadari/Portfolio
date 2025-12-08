@@ -36,7 +36,7 @@ const Aside = () => {
               Koushik Kadari
             </h1>
 
-            <p className="title">Web developer</p>
+            <p className="title">Software Engineer</p>
           </div>
 
           { !isvisible && 
@@ -99,7 +99,7 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Github</p>
 
-                <a href="https://github.com/kaushik-kadari" className="contact-link">Koushik Kadari</a>
+                <a href="https://github.com/kaushik-kadari" target="_blank" className="contact-link">Koushik Kadari</a>
               </div>
             </li>
 
@@ -112,7 +112,7 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Linkedin</p>
 
-                <a href="https://www.linkedin.com/in/kaushik-kadari" className="contact-link">Koushik Kadari</a>
+                <a href="https://www.linkedin.com/in/kaushik-kadari" target="_blank" className="contact-link">Koushik Kadari</a>
               </div>
             </li>
 
@@ -125,7 +125,7 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Leetcode</p>
 
-                <a href="https://www.leetcode.com/kaushik_kadari" className="contact-link">Koushik Kadari</a>
+                <a href="https://www.leetcode.com/kaushik_kadari" target="_blank" className="contact-link">Koushik Kadari</a>
               </div>
             </li>
 

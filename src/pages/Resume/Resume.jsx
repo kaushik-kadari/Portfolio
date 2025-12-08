@@ -6,9 +6,13 @@ import SkillItem from './SkillItem';
 
 const Resume = () => {
   const handleDownload = () => {
+    const fileId = '1i4xFjFGUF-0gxLvrKGKUmJR023WeZKNN';
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    
     const link = document.createElement('a');
-    link.href = "Koushik_Resume.pdf";
+    link.href = downloadUrl;
     link.download = 'Koushik_Kadari_Resume.pdf';
+    link.target = '_self';
     link.click();
   };
 
@@ -29,7 +33,7 @@ const Resume = () => {
         <ol className="timeline-list">
           <TimelineItem
             title="Keshav Memorial Institute of Technology, Hyderabad"
-            date="2022 — Present"
+            date="2022 — 2026 (Expected)"
             description="B.Tech in Information Technology 9.29 CGPA"
           />
           <TimelineItem
@@ -54,12 +58,21 @@ const Resume = () => {
         </div>
         <ol className="timeline-list">
           <TimelineItem
-            title="Research Intern – Parallel Computing and CUDA"
-            date="Jun 2024 – Feb 2025"
+            title="Eventbrite - SDE Intern"
+            date="Jul 2025 – Present"
             description={[
-              "• Optimized sequential code to parallel code using CUDA, achieving a 25% speedup in performance and efficiency.",
-              "• Implemented and tested CUDA kernels, achieving significant speedup in computational tasks.",
-              "• Conducted performance analysis and debugging of CUDA applications to ensure optimal functionality.",
+              "• Led the end-to-end migration of the Organizer App's architecture from TCA 0.52 → 1.17, adopting Swift Concurrency (async/await) and retiring legacy Combine workflows.",
+              "• Built new features for the Stripe Reader M2 including interactive tutorials, device-pairing flows, and hardware menus.",
+              "• Enhanced performance and scalability by fixing pagination loops, adding pull-to-refresh, and optimizing data handling to support 10K+ attendees."
+            ].map((line, index) => <p key={index}>{line}</p>)}
+          />
+          <TimelineItem
+            title="High-Performance Computing Intern"
+            date="Jun 2024 – May 2025"
+            description={[
+              "• Cut GPU runtime for missile-flow (CFD simulations) by 25.93%—from 30 days to 22 by converting sequential solvers into parallel CUDA kernels with optimized memory access patterns.",
+              "• Engineered and tuned CUDA kernels to boost SM/core utilization, improving warp efficiency and eliminating bottlenecks in computation-heavy loops.",
+              "• Collaborated with DRDL scientists while conducting Nsight-driven profiling and debugging to refine CUDA kernels and align them with simulation and modeling requirements.",
             ].map((line, index) => <p key={index}>{line}</p>)}
           />
         </ol>
@@ -73,11 +86,36 @@ const Resume = () => {
           <h3 className="h3 ">Technical Skills</h3>
         </div>
         <div className='timeline-text' style={{display: 'flex', flexDirection: 'column', gap: '10px', marginLeft: '60px'}}>
-          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Languages </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> C, C++, Python, Java, Javascript</span>
-          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Frontend </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> React.js, Tailwind, Bootstrap, HTML, CSS</span>
-          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Backend </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> Node.js, Express.js, Flask</span>
-          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Databases </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> MongoDB, MySQL</span>
-          <span style={{color: 'white', display: 'flex',}}> <h4 style={{marginRight : '15px'}}>Tools & Platforms </h4> <p className='timeline-text' style={{marginRight : '15px'}}>:</p> Git, GitHub, Unix/Linux, Postman, VS Code, Windows</span>
+          <span style={{color: 'white', display: 'flex', alignItems: 'flex-start'}}>
+            <h4 style={{width: '100px', flexShrink: 0}}>Languages</h4>
+            <p className='timeline-text' style={{marginRight: '15px'}}>:</p>
+            <p>C, C++, Python, Java, Javascript</p>
+          </span>
+          <span style={{color: 'white', display: 'flex', alignItems: 'flex-start'}}>
+            <h4 style={{width: '100px', flexShrink: 0}}>Frontend</h4>
+            <p className='timeline-text' style={{marginRight: '15px'}}>:</p>
+            <p>React.js, Tailwind, Bootstrap, HTML, CSS</p>
+          </span>
+          <span style={{color: 'white', display: 'flex', alignItems: 'flex-start'}}>
+            <h4 style={{width: '100px', flexShrink: 0}}>Backend</h4>
+            <p className='timeline-text' style={{marginRight: '15px'}}>:</p>
+            <p>Node.js, Express.js, Flask</p>
+          </span>
+          <span style={{color: 'white', display: 'flex', alignItems: 'flex-start'}}>
+            <h4 style={{width: '100px', flexShrink: 0}}>Databases</h4>
+            <p className='timeline-text' style={{marginRight: '15px'}}>:</p>
+            <p>MongoDB, MySQL</p>
+          </span>
+          <span style={{color: 'white', display: 'flex', alignItems: 'flex-start'}}>
+            <h4 style={{width: '100px', flexShrink: 0}}>Tools & Platforms</h4>
+            <p className='timeline-text' style={{marginRight: '15px'}}>:</p>
+            <p>Git, GitHub, Unix/Linux, Postman, VS Code, Windows</p>
+          </span>
+          <span style={{color: 'white', display: 'flex', alignItems: 'flex-start'}}>
+            <h4 style={{width: '100px', flexShrink: 0}}>Relevant Coursework</h4>
+            <p className='timeline-text' style={{marginRight: '15px'}}>:</p>
+            <p>Software Engineering, Computer Networks, Operating Systems, Parallel Programming, DBMS</p>
+          </span>
         </div>
       </div>
     </section>
