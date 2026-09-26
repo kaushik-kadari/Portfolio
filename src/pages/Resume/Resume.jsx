@@ -6,7 +6,7 @@ import SkillItem from './SkillItem';
 
 const Resume = () => {
   const handleDownload = () => {
-    const fileId = '1i4xFjFGUF-0gxLvrKGKUmJR023WeZKNN';
+    const fileId = '1F3P1bQiFVazeLXtVqerr7rDmQqoktGFt';
     const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
     
     const link = document.createElement('a');
