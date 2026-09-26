@@ -33,18 +33,18 @@ const Resume = () => {
         <ol className="timeline-list">
           <TimelineItem
             title="Keshav Memorial Institute of Technology, Hyderabad"
-            date="2022 — 2026 (Expected)"
-            description="B.Tech in Information Technology 9.29 CGPA"
+            date="2022 — 2026"
+            description="B.Tech in Information Technology - 9.1 CGPA"
           />
           <TimelineItem
             title="Sri Chaitanya Junior College, Hyderabad"
             date="2020 — 2022"
-            description="Maths Physics Chemistry (MPC) 98.4 %"
+            description="Maths Physics Chemistry (MPC) - 98.4 %"
           />
           <TimelineItem
             title="Lotus High School, Jadcherla"
             date="2019 — 2020"
-            description="Secondary School Certificate (SSC) 10 GPA"
+            description="Secondary School Certificate (SSC) - 10 GPA"
           />
         </ol>
       </div>
@@ -56,7 +56,21 @@ const Resume = () => {
           </div>
           <h3 className="h3">Experience</h3>
         </div>
-        <ol className="timeline-list">
+        <ol className="timeline-list has-logos">
+          <TimelineItem
+            title="ABC Fitness - Software Engineer"
+            date="Sep 2026 – Present"
+            description="Full-time · Hybrid · Hyderabad, Telangana, India"
+            logo="/images/companies/abc-fitness.png"
+            logoAlt="ABC Fitness"
+          />
+          <TimelineItem
+            title="ABC Fitness - Software Engineer Apprentice - AI"
+            date="Jun 2026 – Sep 2026"
+            description="Apprenticeship · Hybrid · Hyderabad, Telangana, India"
+            logo="/images/companies/abc-fitness.png"
+            logoAlt="ABC Fitness"
+          />
           <TimelineItem
             title="Eventbrite - SDE Intern"
             date="Jul 2025 – Present"
@@ -65,6 +79,8 @@ const Resume = () => {
               "• Built new features for the Stripe Reader M2 including interactive tutorials, device-pairing flows, and hardware menus.",
               "• Enhanced performance and scalability by fixing pagination loops, adding pull-to-refresh, and optimizing data handling to support 10K+ attendees."
             ].map((line, index) => <p key={index}>{line}</p>)}
+            logo="/images/companies/eventbrite.png"
+            logoAlt="Eventbrite"
           />
           <TimelineItem
             title="High-Performance Computing Intern"
@@ -74,6 +90,8 @@ const Resume = () => {
               "• Engineered and tuned CUDA kernels to boost SM/core utilization, improving warp efficiency and eliminating bottlenecks in computation-heavy loops.",
               "• Collaborated with DRDL scientists while conducting Nsight-driven profiling and debugging to refine CUDA kernels and align them with simulation and modeling requirements.",
             ].map((line, index) => <p key={index}>{line}</p>)}
+            logo="/images/companies/drdl.png"
+            logoAlt="DRDO"
           />
         </ol>
       </div>

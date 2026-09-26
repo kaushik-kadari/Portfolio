@@ -25,7 +25,7 @@ const Aside = () => {
         <div className="sidebar-info">
           <figure className="avatar-box">
             <img
-              src="/images/profileDp.jpg"
+              src="/images/profile/Profile.jpeg"
               alt="Koushik Kadari"
               width="80"
             />

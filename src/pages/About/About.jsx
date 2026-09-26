@@ -6,23 +6,23 @@ import Service from "./Service";
 
 const servicesData = [
   {
-    icon: "/images/dev-icon.png",
+    icon: "/images/icons/dev-icon.png",
     title: "Web development",
     description: "High-quality development of sites at the professional level.",
   },
   {
-    icon: "/images/genai-icon.png",
+    icon: "/images/icons/genai-icon.png",
     title: "Gen AI",
     description: "I am good at Gen AI and Retrieval-Augmented Generation.",
   },
   {
-    icon: "/images/appdev-icon.png",
+    icon: "/images/icons/appdev-icon.png",
     title: "iOS App Development",
     description:
       "I currently have a good understanding of iOS App Development.",
   },
   {
-    icon: "/images/dsa-icon.png",
+    icon: "/images/icons/dsa-icon.png",
     title: "DSA and OOP",
     description: "I have a good understanding of DSA and OOP.",
   },
@@ -127,37 +127,37 @@ const About = () => {
 
         <li className="clients-item">
           <a href="#">
-            <img src="images/logo-1-color.png" alt="client logo"/>
+            <img src="/images/clients/logo-1-color.png" alt="client logo"/>
           </a>
         </li>
 
         <li className="clients-item">
           <a href="#">
-            <img src="images/logo-2-color.png" alt="client logo"/>
+            <img src="/images/clients/logo-2-color.png" alt="client logo"/>
           </a>
         </li>
 
         <li className="clients-item">
           <a href="#">
-            <img src="images/logo-3-color.png" alt="client logo"/>
+            <img src="/images/clients/logo-3-color.png" alt="client logo"/>
           </a>
         </li>
 
         <li className="clients-item">
           <a href="#">
-            <img src="images/logo-4-color.png" alt="client logo"/>
+            <img src="/images/clients/logo-4-color.png" alt="client logo"/>
           </a>
         </li>
 
         <li className="clients-item">
           <a href="#">
-            <img src="images/logo-5-color.png" alt="client logo"/>
+            <img src="/images/clients/logo-5-color.png" alt="client logo"/>
           </a>
         </li>
 
         <li className="clients-item">
           <a href="#">
-            <img src="images/logo-6-color.png"alt="client logo"/>
+            <img src="/images/clients/logo-6-color.png"alt="client logo"/>
           </a>
         </li>
 
